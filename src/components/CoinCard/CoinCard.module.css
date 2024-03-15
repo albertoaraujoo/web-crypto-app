@@ -1,0 +1,5 @@
+.card {
+  max-width: 56rem;
+  border: solid 1px var(--green-500);
+  height: 80px;
+}
