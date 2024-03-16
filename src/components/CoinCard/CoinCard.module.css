@@ -1,5 +1,35 @@
 .card {
   max-width: 56rem;
+  width: 100%;
   border: solid 1px var(--green-500);
   height: 80px;
+  margin: 0.875rem 0 0.875rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gray-800);
+}
+
+.nameAndImg {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--green-500);
+}
+
+.coinLogo {
+  width: 4rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  border: solid 3px var(--gray-600);
+}
+.symbol {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+}
+
+.price {
+  margin-right: 1.5rem;
+  color: var(--green-500);
 }
