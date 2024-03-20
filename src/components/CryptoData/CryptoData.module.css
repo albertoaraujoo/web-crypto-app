@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  border: 1px solid var(--gray-600);
+  height: 7rem;
+}
+.divider {
+  width: 40%;
+  border: none;
+  border-top: 2px solid var(--gray-600); /* Altere para a espessura desejada */
+}
+
+.value {
+  color: var(--white);
+  font-weight: bold;
+}

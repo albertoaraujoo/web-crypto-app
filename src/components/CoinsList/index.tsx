@@ -1,5 +1,7 @@
-import { CoinCardProps, CoinList } from "../../types";
+import { CoinList, CoinCardProps } from "../../types";
+import { formatPrice } from "../../utils/formatPrice";
 import { CoinCard } from "../CoinCard";
+
 import styles from "./CoinsList.module.css";
 
 const CoinsList = ({ data }: CoinList) => {
@@ -13,7 +15,7 @@ const CoinsList = ({ data }: CoinList) => {
           id={coin.id}
           key={coin.id}
           name={coin.name}
-          price={coin.price}
+          current_price={formatPrice(Number(coin.current_price))}
           image={coin.image}
           symbol={coin.symbol}
         />

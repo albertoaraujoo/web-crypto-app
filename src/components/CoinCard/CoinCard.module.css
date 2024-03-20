@@ -1,13 +1,33 @@
 .card {
   max-width: 56rem;
+  min-width: 20rem;
   width: 100%;
   border: solid 1px var(--green-500);
   height: 80px;
   margin: 0.875rem 0 0.875rem 0;
   display: flex;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
   background: var(--gray-800);
+  border-box: box-sizing;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  border: solid 1px var(--green-200);
+}
+
+.card:hover,
+.card:hover .nameAndImg,
+.card:hover .price {
+  color: var(--green-200);
 }
 
 .nameAndImg {
@@ -15,6 +35,7 @@
   align-items: center;
   gap: 1.2rem;
   color: var(--green-500);
+  font-size: 0.8rem;
 }
 
 .coinLogo {
@@ -30,6 +51,8 @@
 }
 
 .price {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
+  font-size: 0.8rem;
   color: var(--green-500);
+  width: 5rem;
 }
