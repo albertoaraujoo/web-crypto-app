@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { CryptoPage } from "./pages/CryptoPage/CryptoPage";
+import { Layout } from "./components/Layout/Laytou";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <Layout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "crypto", element: <CryptoPage /> },
+      { path: "crypto/:cryptoId", element: <CryptoPage /> },
+    ],
   },
-
-  { path: "/crypto", element: <CryptoPage /> },
-  { path: "/crypto/:cryptoId", element: <CryptoPage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

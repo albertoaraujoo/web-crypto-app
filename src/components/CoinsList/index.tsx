@@ -8,7 +8,7 @@ const CoinsList = ({ data }: CoinList) => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        Top Cryptocurrency Coins by Market Cap
+        TOP CRYPTOCURRENCY COINS BY MARKET CAP
       </header>
       {data.map((coin: CoinCardProps) => (
         <CoinCard
