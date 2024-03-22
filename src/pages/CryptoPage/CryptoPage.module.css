@@ -12,3 +12,10 @@
 .title {
   color: var(--green-500);
 }
+
+.back {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+}

@@ -74,7 +74,10 @@ export const Chart = ({ prices }: { prices: number[][] | null }) => {
   return (
     <ReactApexChart
       options={options}
-      series={series}
+      series={series.map((serie) => ({
+        name: serie.name,
+        data: serie.data || [],
+      }))}
       height={350}
       style={{ width: "100%" }}
     />

@@ -1,40 +1,42 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from "./CryptoPage.module.css";
 import Wallet from "../../components/Wallet";
-// import { Chart } from "../../components/Chart";
-// import { CoinImage } from "../../components/CoinImage";
-// import { CryptoData } from "../../components/CryptoData";
-// import { pricesFetch } from "../../services/pricesFetch";
-// import { cryptoDataFetch } from "../../services/cryptoDataFecth";
-// import { formatPrice } from "../../utils/formatPrice";
-// import { CryptoDataProps } from "../../types";
+import { ArrowBack } from "../../components/Arrowback";
+import { Chart } from "../../components/Chart";
+import { CoinImage } from "../../components/CoinImage";
+import { CryptoData } from "../../components/CryptoData";
+import { pricesFetch } from "../../services/pricesFetch";
+import { cryptoDataFetch } from "../../services/cryptoDataFecth";
+import { formatPrice } from "../../utils/formatPrice";
+import { CryptoDataProps } from "../../types";
 
 export const CryptoPage = () => {
   const { cryptoId } = useParams<{ cryptoId: string }>();
-  // const [prices, setPrices] = useState<number[][] | null>(null);
-  // const [cryptoData, setCryptoData] = useState<CryptoDataProps>();
+  const [prices, setPrices] = useState<number[][] | null>(null);
+  const [cryptoData, setCryptoData] = useState<CryptoDataProps>();
 
-  // useEffect(() => {
-  //   const fetchPrices = async () => {
-  //     if (cryptoId) {
-  //       const prices = await pricesFetch(cryptoId ?? "undefined");
-  //       setPrices(prices);
-  //       const cryptoData = await cryptoDataFetch(cryptoId ?? "undefined");
-  //       setCryptoData(cryptoData);
-  //       console.log(cryptoData);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchPrices = async () => {
+      if (cryptoId) {
+        const prices = await pricesFetch(cryptoId ?? "undefined");
+        setPrices(prices);
+        const cryptoData = await cryptoDataFetch(cryptoId ?? "undefined");
+        setCryptoData(cryptoData);
+      }
+    };
 
-  //   fetchPrices();
-  // }, [cryptoId]);
+    fetchPrices();
+  }, [cryptoId]);
 
   return (
     <div>
-      <Link to="/">Voltar</Link>
+      <Link className={styles.back} to="/">
+        <ArrowBack />
+      </Link>
       <main className={styles.container}>
         <Wallet />
-        {/* {cryptoData && (
+        {cryptoData && (
           <>
             <CoinImage
               src={cryptoData.image}
@@ -68,7 +70,7 @@ export const CryptoPage = () => {
 
             <Chart prices={prices} />
           </>
-        )} */}
+        )}
       </main>
     </div>
   );

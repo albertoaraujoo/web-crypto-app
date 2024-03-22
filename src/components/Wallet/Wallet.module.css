@@ -1,5 +1,4 @@
 .container {
-  border: solid 1px var(--blue-500);
   max-width: 56rem;
   width: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -14,7 +13,16 @@
   margin-bottom: 1rem;
 }
 
-.container p {
+.notConnected {
   color: var(--red-500);
   font-size: 0.75rem;
+}
+
+.balance {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.balance span {
+  color: var(--green-500);
 }

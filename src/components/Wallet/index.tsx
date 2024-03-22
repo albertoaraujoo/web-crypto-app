@@ -11,7 +11,6 @@ import {
 import { setConnected } from "../../features/connected/connectedSlice";
 
 const Wallet = () => {
-  const account = useSelector((state: RootState) => state.account);
   const balance = useSelector((state: RootState) => state.balance);
   const connected = useSelector((state: RootState) => state.connected);
 
@@ -48,13 +47,27 @@ const Wallet = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h3>METAMASK WALLET</h3>
+    <div
+      className={styles.container}
+      style={{
+        border: connected
+          ? "solid 1px var(--green-500)"
+          : "solid 1px var(--blue-200)",
+      }}
+    >
+      <h3 style={{ color: connected ? "var(--green-500" : "var(--blue-200" }}>
+        METAMASK WALLET
+      </h3>
       <div className={styles.textAndButton}>
-        <p>
-          Connect to see <br /> your ETH balance here {balance}
-          {account}
-        </p>
+        {!connected ? (
+          <p className={styles.notConnected}>
+            Connect to see <br /> your ETH balance here
+          </p>
+        ) : (
+          <p className={styles.balance}>
+            Your ETH Balance: <br /> <span>{balance} ETH</span>
+          </p>
+        )}
         <ConnectWalletBtn onClick={connectToMetamask} connected={connected} />
       </div>
     </div>
