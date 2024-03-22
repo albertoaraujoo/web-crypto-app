@@ -31,3 +31,8 @@ export type CryptoDataProps = {
   high24: number;
   low24: number;
 };
+
+export type ConnectBtnProps = {
+  onClick: () => void;
+  connected: boolean | null;
+};

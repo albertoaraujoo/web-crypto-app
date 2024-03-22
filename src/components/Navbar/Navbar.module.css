@@ -13,23 +13,3 @@
   text-align: center;
   padding: 0.313rem 0 0.313rem 0;
 }
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  font-weight: bold;
-  border-radius: 1rem;
-  background: var(--green-500);
-  gap: 0.8rem;
-  width: 9rem;
-  height: 3rem;
-  color: var(--white);
-  cursor: pointer;
-  transition: background 0.5s;
-}
-
-.button:hover {
-  background: var(--green-200);
-}

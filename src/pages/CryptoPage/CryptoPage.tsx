@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./CryptoPage.module.css";
+import Wallet from "../../components/Wallet";
 // import { Chart } from "../../components/Chart";
 // import { CoinImage } from "../../components/CoinImage";
 // import { CryptoData } from "../../components/CryptoData";
@@ -30,8 +31,9 @@ export const CryptoPage = () => {
 
   return (
     <div>
+      <Link to="/">Voltar</Link>
       <main className={styles.container}>
-        <div>crypto: {cryptoId}</div>
+        <Wallet />
         {/* {cryptoData && (
           <>
             <CoinImage
