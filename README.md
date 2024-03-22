@@ -1,6 +1,6 @@
 # Web Crypto App
 
-O projeto traz informações sobre as 10 moedas com maior capitalização de mercado no momento.
+The project provides information about the top 10 cryptocurrencies by market capitalization at the moment.
 
 ## 🔥 Introduction
 
