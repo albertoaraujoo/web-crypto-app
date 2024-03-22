@@ -1,10 +1,10 @@
 # Web Crypto App
 
-O projeto traz informações sobre as 10 moedas com maior capitalização de mercado no momento.
+The project provides information about the top 10 cryptocurrencies by market capitalization at the moment.
 
 ## 🔥 Introduction
 
-The project uses requests to the CoinGecko API (https://www.coingecko.com/). On the main page, there is first a section for the user to connect to their MetaMask wallet (The user needs to have the MetaMask extension installed in their browser) and see their ETH balance. In addition, there are 10 cards presented with the top 10 cryptocurrencies by market capitalization at the moment. Each card is clickable and leads to a specific page of the respective cryptocurrency, which presents more data about it such as: highest and lowest price in the last 24 hours, chart with price variation, and total market volume.
+The project uses requests to the CoinGecko API (https://www.coingecko.com/). On the main page, there is first a section for the user to connect to their MetaMask wallet (The user needs to have the MetaMask extension installed in their browser) and see their ETH balance. Additionally, there are 10 cards presented with the top 10 cryptocurrencies by market capitalization at the moment. Each card is clickable and leads to a specific page of the respective cryptocurrency, which presents more data about it such as: highest and lowest price in the last 24 hours, chart with price variation (made with the Apex Charts library), and total market volume.
 
 ### ⚙️ Prerequisites
 
@@ -31,6 +31,6 @@ Steps to install:
 
 - ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-- ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-- ![Vite](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+- ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 - ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
