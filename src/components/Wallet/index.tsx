@@ -27,8 +27,8 @@ const Wallet = () => {
         dispatch(setConnected(true));
         setWeb3(web3Instance);
         dispatch(setAccount(accounts[0]));
-        updateBalance(web3Instance, accounts[0]);
         console.log(web3);
+        updateBalance(web3Instance, accounts[0]);
       } catch (error) {
         console.error("Error connecting to Metamask:", error);
       }
