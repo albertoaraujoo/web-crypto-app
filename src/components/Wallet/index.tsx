@@ -40,7 +40,6 @@ const Wallet = () => {
   const updateBalance = async (web3Instance: Web3, account: string) => {
     try {
       const balance = await web3Instance.eth.getBalance(account);
-      // Converting the balance from Wei to Ether
       const balanceInEther = web3Instance.utils.fromWei(balance, "ether");
       dispatch(setBalance(balanceInEther));
     } catch (error) {
